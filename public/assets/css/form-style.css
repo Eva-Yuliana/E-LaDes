@@ -1,0 +1,122 @@
+/* Animasi muncul */
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px); /* mulai agak ke bawah */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* kembali ke posisi normal */
+  }
+}
+
+/* Background penuh */
+body {
+  font-family: "Poppins", sans-serif;
+  background: url("../img/hero.jpg") no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Overlay transparan di atas gambar */
+body::before {
+  content: "";
+  position: fixed; /* pakai fixed biar full screen dan ikut scroll */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+/* Card Form */
+.form-container {
+  position: relative; /* biar bisa pakai z-index */
+  z-index: 2; /* lebih tinggi dari overlay */
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.2);
+  padding: 40px 50px; /* tambah padding kanan-kiri biar lega */
+  width: 100%;
+  max-width: 1000px; /* diperbesar dari 650px jadi 900px */
+  animation: fadeInUp 0.6s ease;
+}
+
+/* Judul */
+.form-container h2 {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.form-container p {
+  text-align: center;
+  font-size: 15px;
+  color: #777;
+  margin-bottom: 25px;
+}
+
+/* Input dan Select */
+.form-container .form-control {
+  border-radius: 8px;
+  padding: 10px 12px;
+  border: 1px solid #d4d3d3;
+  transition: all 0.3s ease;
+}
+
+.form-container .form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 8px rgba(13, 110, 253, 0.3);
+}
+
+/* Input Group (ikon) */
+.input-group-text {
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  border-right: 0;
+}
+
+/* Subjudul */
+.form-container h5 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #0d6efd;
+  margin-bottom: 15px;
+  border-left: 4px solid #0d6efd;
+  padding-left: 10px;
+}
+
+/* Tombol */
+.form-container .btn-submit {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  background: #0d6efd;
+  border: none;
+  color: white;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.form-container .btn-submit:hover {
+  background: #0b5ed7;
+}
+
+/* Animasi masuk */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

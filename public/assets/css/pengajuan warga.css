@@ -1,0 +1,243 @@
+/* =========================
+   GLOBAL
+========================= */
+body {
+  background: #f3f5f9;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  color: #2d3748;
+}
+
+/* =========================
+   HEADER
+========================= */
+.card-government {
+  background: linear-gradient(135deg, #2c4e8a, #3b5da0);
+  color: #fff;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.card-government h4 {
+  font-weight: 600;
+}
+
+.card-government small {
+  opacity: 0.85;
+  font-size: 0.9rem;
+}
+
+/* =========================
+   SECTION TITLE
+========================= */
+.bg-government-light {
+  background: #eef3fb;
+  border-radius: 12px 12px 0 0;
+}
+
+.text-government-primary {
+  color: #2c4e8a;
+  font-weight: 600;
+}
+
+/* =========================
+   BUTTON
+========================= */
+.btn-government {
+  background: #2c4e8a;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 10px;
+  font-weight: 600;
+  height: 44px;
+}
+
+.btn-government:hover {
+  background: #274579;
+  color: #fff;
+}
+
+/* =========================
+   DOCUMENT CARD
+========================= */
+.card.document-card {
+  border-radius: 14px;
+  border: 1px solid #e6ebf2; /* override .card border:none */
+  background: #fff;
+  max-width: 320px;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+/* hover */
+.card.document-card:hover {
+  transform: translateY(-4px);
+  border-color: #2c4e8a;
+  box-shadow: 0 0 0 0.1rem rgba(44, 78, 138, 0.2);
+}
+
+/* ICON BULAT */
+.document-icon {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #eaf1ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  color: #2c4e8a;
+  font-size: 34px;
+}
+
+/* =========================
+   SEARCH AREA
+========================= */
+.main-card {
+  border-radius: 10px;
+  background: #fff;
+}
+
+.form-label {
+  font-size: 0.95rem;
+}
+
+#tokenInput {
+  height: 50px;
+  border-radius: 10px 0 0 10px;
+  border-right: none;
+  background: #f7f9fc;
+}
+
+#tokenInput:focus {
+  background: #fff;
+  border-color: #2c4e8a;
+  box-shadow: 0 0 0 0.1rem rgba(44, 78, 138, 0.2);
+}
+
+.input-group .btn-government {
+  border-radius: 0 10px 10px 0;
+  height: 50px;
+}
+
+/* akses cepat */
+.btn-outline-primary.btn-lg {
+  height: 50px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+/* agar label sejajar bawah */
+.col-lg-8,
+.col-lg-4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* =========================
+   LIST PENGAJUAN
+========================= */
+.pengajuan-item {
+  border-left: 5px solid #2c4e8a;
+  border-radius: 12px;
+  background: #f8faff;
+  transition: 0.2s;
+}
+
+.pengajuan-item:hover {
+  background: #f1f6ff;
+}
+
+.pengajuan-item h5 {
+  font-size: 1.05rem;
+}
+
+.pengajuan-item .text-muted {
+  font-size: 0.9rem;
+}
+
+/* BADGE STATUS */
+.badge-status {
+  background: #f4b400;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+/* ACTION BUTTON */
+.pengajuan-item .btn-sm {
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+#tokenInput {
+  font-size: 0.95rem;
+}
+
+#tokenInput::placeholder {
+  font-size: 0.9rem;
+  color: #63676e;
+}
+
+/* =====================================
+   PERFECT ALIGN FIX (FINAL)
+===================================== */
+
+.align-search {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* kolom jadi flex vertical */
+.search-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* AREA YANG DISEJAJARKAN */
+.search-align {
+  height: 54px;
+  display: flex;
+  align-items: center;
+}
+
+/* input styling */
+.token-input {
+  height: 54px;
+  font-size: 0.95rem;
+  border-radius: 10px 0 0 10px;
+}
+
+/* placeholder kecil */
+.token-input::placeholder {
+  font-size: 0.9rem;
+  color: #8a94a6;
+}
+
+/* tombol cari */
+.input-group .btn-government {
+  height: 54px;
+  border-radius: 0 10px 10px 0;
+}
+
+/* tombol riwayat */
+.btn-riwayat {
+  height: 54px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+/* info text tidak mempengaruhi alignment */
+.info-text {
+  margin-top: 8px;
+}
+
+/* rapikan label */
+.form-label {
+  margin-bottom: 6px;
+}

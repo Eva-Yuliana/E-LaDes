@@ -1,0 +1,328 @@
+/* =========================
+   KABAR DESA
+========================= */
+
+body {
+  background-color: #f4f7fa;
+}
+
+.card-government {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: white;
+  border: none;
+  box-shadow: 0 8px 25px rgba(30, 60, 114, 0.3);
+}
+
+.text-government-primary {
+  color: #1e3c72 !important;
+}
+
+.bg-government-light {
+  background: linear-gradient(135deg, #f8f9ff 0%, #e8f0ff 100%);
+}
+
+.kabar-card {
+  border: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  overflow: hidden;
+  background: #fff;
+}
+
+.kabar-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.kabar-image {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.kabar-date {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.btn-government {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  border: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 10px 25px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.btn-government:hover {
+  background: linear-gradient(135deg, #163056 0%, #1e4176 100%);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(30, 60, 114, 0.4);
+}
+
+/* =========================
+   DETAIL KABAR DESA
+========================= */
+.card-government {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: white;
+  border: none;
+}
+
+.government-container {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  min-height: 100vh;
+}
+
+.photo-gallery .img-thumbnail {
+  cursor: pointer;
+  border: 3px solid #1e3c72;
+  position: relative;
+  overflow: hidden;
+}
+
+.photo-gallery .img-thumbnail:hover {
+  border-color: #2a5298;
+  box-shadow: 0 4px 15px rgba(30, 60, 114, 0.2);
+}
+
+.photo-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.info-card {
+  background: white;
+  border-left: none !important;
+}
+
+.info-card:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-government {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  border: none;
+  color: white;
+}
+
+.btn-government:hover {
+  background: linear-gradient(135deg, #2a5298 0%, #1e3c72 100%);
+  color: white;
+}
+
+.modal-government .modal-header {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  border-bottom: none;
+}
+
+.modal-government .modal-footer {
+  border-top: 1px solid #e9ecef;
+  background-color: var(--bs-primary);
+}
+
+.modal img {
+  transition: none;
+  will-change: auto;
+  backface-visibility: hidden;
+}
+
+.photo-gallery .img-thumbnail::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(30, 60, 114, 0.7);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.photo-gallery .img-thumbnail:hover::after {
+  opacity: 1;
+}
+
+/* Prevent any unwanted animations */
+* {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.modal-dialog {
+  will-change: transform;
+}
+
+.date-badge {
+  background: linear-gradient(135deg, #2a5298 0%, #1e3c72 100%);
+  color: white;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  display: inline-block;
+}
+
+/* =========================
+   PENGUMUMAN
+========================= */
+body {
+  background-color: #f4f7f6;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Styles dari Push Blade */
+.card-government {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: white;
+  border: none;
+  box-shadow: 0 8px 25px rgba(30, 60, 114, 0.3);
+}
+
+.text-government-primary {
+  color: #1e3c72 !important;
+}
+
+.bg-government-light {
+  background: linear-gradient(135deg, #f8f9ff 0%, #e8f0ff 100%);
+}
+
+.btn-government {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  border: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-government:hover {
+  background: linear-gradient(135deg, #163056 0%, #1e4176 100%);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(30, 60, 114, 0.4);
+}
+
+/* Tambahan styling untuk tabel agar lebih rapi */
+.table-government thead th {
+  background-color: #f8f9ff;
+  color: #1e3c72;
+  border-bottom: 2px solid #e8f0ff;
+  padding: 15px;
+}
+
+.table-government tbody td {
+  padding: 15px;
+  vertical-align: middle;
+}
+
+/* Meratakan Show Entries dan Search */
+.dataTables_wrapper .row {
+  display: flex;
+  align-items: center;
+}
+
+.dataTables_length label,
+.dataTables_filter label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  color: #1b1b1b;
+}
+
+.dataTables_filter input {
+  margin-left: 0.5rem !important;
+  border: 1px solid #d1d3e2;
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+
+.dataTables_length select {
+  border: 1px solid #d1d3e2;
+  border-radius: 4px;
+  padding: 2px 8px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: none !important;
+  background-color: #fff;
+  text-align: center;
+  cursor: pointer;
+  min-width: 45px;
+}
+
+table.dataTable thead th {
+  padding-right: 12px !important;
+}
+
+/* =========================
+   DETAIL PENGUMUMAN
+========================= */
+
+body {
+  background-color: #f4f7f6;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card-government {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: white;
+  border: none;
+  box-shadow: 0 8px 25px rgba(30, 60, 114, 0.3);
+}
+
+.text-government-primary {
+  color: #1e3c72 !important;
+}
+
+.bg-government-light {
+  background: linear-gradient(135deg, #f8f9ff 0%, #e8f0ff 100%);
+}
+
+.info-item {
+  background: #f8f9ff;
+  /* border-left: 4px solid #1e3c72; */
+  padding: 1rem;
+  border-radius: 8px; /* Disesuaikan agar simetris jika border-left mati */
+  margin-bottom: 1rem;
+}
+
+.info-item .label {
+  font-weight: 600;
+  color: #1e3c72;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.info-item .value {
+  color: #333;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.badge-date {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.btn-group .btn {
+  margin-left: 0;
+}

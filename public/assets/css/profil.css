@@ -1,0 +1,537 @@
+/* Government Theme Colors */
+:root {
+  --government-primary: #1e3c72;
+  --government-secondary: #2a5298;
+  --government-accent: #ffd700;
+  --government-light: #f8f9ff;
+  --government-dark: #163056;
+}
+
+body {
+  background-color: #f4f7f6;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
+.sidebar-government {
+  background: linear-gradient(180deg, var(--government-primary) 0%, var(--government-secondary) 100%);
+  box-shadow: 4px 0 15px rgba(30, 60, 114, 0.2);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  width: 280px;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  padding: 20px;
+}
+
+/* Overlay pattern untuk tekstur sidebar */
+.sidebar-government::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M0,0 L100,0 L100,100 L0,100 Z" fill="white" opacity="0.05"/></svg>');
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.sidebar-government .brand-section {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: left;
+}
+
+.sidebar-government .brand-title {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.sidebar-government .brand-subtitle {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.sidebar-government .brand-text {
+  color: white;
+  margin-left: 0px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Logo */
+.logo-wrapper {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.sidebar-government .nav-link {
+  color: rgba(255, 255, 255, 0.9) !important;
+  padding: 12px 16px;
+  margin-bottom: 8px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(5px);
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+}
+
+/* Efek kilau saat hover */
+.sidebar-government .nav-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.sidebar-government .nav-link:hover::before {
+  left: 100%;
+}
+
+.sidebar-government .nav-link:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: white !important;
+  transform: translateX(8px);
+  border-color: rgba(255, 215, 0, 0.5);
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.2);
+}
+
+.sidebar-government .nav-link.active {
+  background: linear-gradient(135deg, var(--government-accent) 0%, #ffed4e 100%);
+  color: var(--government-primary) !important;
+  font-weight: 600;
+  border-color: var(--government-accent);
+  box-shadow: 0 4px 20px rgba(255, 215, 0, 0.3);
+}
+
+.sidebar-government .nav-link.active i {
+  color: var(--government-primary) !important;
+}
+
+.sidebar-government .nav-link i {
+  width: 20px;
+  margin-right: 12px;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.sidebar-government hr {
+  border-color: rgba(255, 255, 255, 0.3);
+  margin: 20px 0;
+}
+
+.btn-government-logout {
+  background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-shadow: 0 4px 15px rgba(220, 53, 69, 0.3);
+  cursor: pointer;
+}
+
+.btn-government-logout:hover {
+  background: linear-gradient(135deg, #c82333 0%, #bd2130 100%);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(220, 53, 69, 0.4);
+}
+
+/* Mobile Navbar Styles */
+.mobile-navbar-government {
+  background: linear-gradient(135deg, var(--government-primary) 0%, var(--government-secondary) 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(30, 60, 114, 0.3);
+  border-bottom: 3px solid var(--government-accent);
+}
+
+.mobile-navbar-government .navbar-brand {
+  color: white !important;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Nav section headers */
+.nav-section-header {
+  color: var(--government-accent);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 20px 0 10px 0;
+  padding-left: 16px;
+}
+
+/* User info section */
+.user-info {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 20px;
+  text-align: center;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.user-info .user-name {
+  color: white;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.user-info .user-role {
+  color: var(--government-accent);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive Main Content area adjustment */
+.main-content {
+  transition: margin 0.3s ease;
+  padding: 20px;
+}
+
+@media (min-width: 769px) {
+  .main-content {
+    margin-left: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-collapse {
+    background: linear-gradient(135deg, var(--government-primary) 0%, var(--government-secondary) 100%);
+    margin-top: 10px;
+    border-radius: 15px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* SweetAlert Custom Styles */
+.swal-government-popup {
+  border-radius: 15px !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2) !important;
+  padding: 2rem !important;
+}
+.swal-government-title {
+  color: #1e3c72 !important;
+  font-weight: 600 !important;
+}
+.swal-government-confirm {
+  background: linear-gradient(135deg, #dc3545 0%, #c82333 100%) !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 10px 24px !important;
+  margin-left: 10px !important;
+  font-weight: 600 !important;
+}
+.swal-government-cancel {
+  background: #6c757d !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 10px 24px !important;
+  font-weight: 600 !important;
+}
+
+/* ============================= */
+/* MOBILE NAVBAR GOVERNMENT FIX */
+/* ============================= */
+
+.mobile-navbar-government {
+  background: linear-gradient(135deg, var(--government-primary) 0%, var(--government-secondary) 100%);
+  color: white;
+  border-bottom: 3px solid var(--government-accent);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* Brand */
+.mobile-navbar-government .navbar-brand {
+  color: white !important;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mobile-navbar-government .navbar-brand i {
+  color: white !important;
+  font-size: 1.4rem;
+}
+
+/* Hamburger button */
+.mobile-navbar-government .navbar-toggler {
+  border: none;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+
+.mobile-navbar-government .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.mobile-navbar-government .navbar-toggler-icon {
+  filter: brightness(0) invert(1); /* bikin icon putih */
+}
+
+/* Collapse area */
+@media (max-width: 768px) {
+  .mobile-navbar-government .navbar-collapse {
+    background: linear-gradient(180deg, var(--government-primary) 0%, var(--government-secondary) 100%);
+    margin-top: 15px;
+    border-radius: 15px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+  }
+
+  .mobile-navbar-government .nav-link {
+    color: white !important;
+    font-weight: 500;
+    padding: 12px 14px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .mobile-navbar-government .nav-link i {
+    color: white !important;
+    font-size: 1.1rem;
+  }
+
+  .mobile-navbar-government .nav-link:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  .mobile-navbar-government .nav-link.active {
+    background: linear-gradient(135deg, var(--government-accent) 0%, #ffed4e 100%);
+    color: var(--government-primary) !important;
+    font-weight: 600;
+  }
+
+  .mobile-navbar-government .nav-link.active i {
+    color: var(--government-primary) !important;
+  }
+}
+
+/* User Info */
+.mobile-user-info {
+  text-align: center;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.mobile-user-info .user-name {
+  color: var(--government-accent);
+  font-weight: 600;
+}
+
+.mobile-user-info .user-role {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.8rem;
+}
+
+/* Logout button mobile */
+.mobile-navbar-government .btn-government-logout {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* =========================
+   PROFIL AKUN - MODERN GOV STYLE
+========================= */
+
+:root {
+  /* Warna Biru Pekat sesuai Gambar */
+  --gov-primary: #1e3c72;
+  --gov-secondary: #4e73df;
+  --gov-blue-dark: #22335c;
+  /* Gradasi sesuai referensi banner */
+  --gov-gradient: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  --gov-info-gradient: linear-gradient(to left, #4ec9d9 0%, #349faf 100%);
+  --gov-success-gradient: linear-gradient(to left, #1cc88a 0%, #13855c 100%);
+}
+
+body {
+  background-color: #f8f9fc;
+  color: #333;
+}
+
+/* Page Header Custom Style */
+.card-government {
+  background: var(--gov-gradient) !important;
+  border: none;
+  border-radius: 5px !important;
+  padding: 1.5rem !important;
+  box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.1) !important;
+}
+
+.card-government h1 {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.bg-gradient-primary {
+  background-color: var(--gov-primary) !important;
+  background-image: none !important;
+}
+
+.bg-gradient-info {
+  background: var(--gov-info-gradient) !important;
+}
+
+.bg-gradient-success {
+  background: var(--gov-success-gradient) !important;
+}
+
+/* Card Styling */
+.card {
+  border-radius: 5px !important;
+  border: 1px solid #e3e6f0;
+}
+
+.card-header {
+  border-bottom: 1px solid #e3e6f0;
+  padding: 0.75rem 1.25rem;
+}
+
+.card.shadow {
+  box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.1) !important;
+}
+
+/* Form & Typography Styling */
+.section-title {
+  color: var(--gov-primary);
+  font-size: 1rem;
+  font-weight: 700 !important;
+  margin-bottom: 0;
+}
+
+.form-label {
+  font-weight: 600;
+  color: #262627;
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+}
+
+.form-control {
+  border-radius: 5px;
+  border: 1px solid #d1d3e2;
+  padding: 0.6rem 0.75rem;
+  font-size: 0.9rem;
+}
+
+.form-control:focus {
+  border-color: #bac8f3;
+  box-shadow: 0 0 0 0.2rem rgba(78, 115, 223, 0.25);
+}
+
+.input-group-text {
+  background-color: #f8f9fc;
+  border: 1px solid #d1d3e2;
+  color: #6e707e;
+}
+
+.form-text {
+  font-size: 1rem;
+  color: #858796;
+  margin-top: 0.3rem;
+}
+
+/* Image Preview */
+.image-preview img {
+  border: 3px solid #fff;
+  box-shadow: 0 0.15rem 1rem 0 rgba(58, 59, 69, 0.15) !important;
+}
+
+/* Sidebar Information */
+#sidebarAvatar {
+  border: 3px solid #fff;
+}
+
+.list-group-item {
+  border-color: #f1f1f1;
+  padding: 0.75rem 0;
+}
+
+.list-group-item h6 {
+  font-size: 0.85rem;
+  color: #262627;
+}
+
+.list-group-item p {
+  font-size: 0.85rem;
+}
+
+/* Button Icon Split */
+.btn-primary {
+  background-color: #4e73df;
+  border-color: #4e73df;
+}
+
+.btn-icon-split {
+  padding: 0;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: stretch;
+  border-radius: 5px;
+}
+
+.btn-icon-split .icon {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 0.8rem;
+  display: flex;
+  align-items: center;
+}
+
+.btn-icon-split .text {
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+}
+
+/* Alert/Security Tips */
+.alert-info {
+  background-color: #e0f4f9;
+  border-left: 4px solid #36b9cc;
+  border-radius: 5px;
+  color: #2c6e79;
+}

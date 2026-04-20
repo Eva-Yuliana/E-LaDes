@@ -1,0 +1,762 @@
+/* Government Theme Colors */
+:root {
+    --government-primary: #1e3c72;
+    --government-secondary: #2a5298;
+    --government-accent: #ffd700;
+    --government-light: #f8f9ff;
+    --government-dark: #163056;
+}
+
+body {
+    background-color: #f4f7f6;
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+}
+
+.sidebar-government {
+    background: linear-gradient(
+        180deg,
+        var(--government-primary) 0%,
+        var(--government-secondary) 100%
+    );
+    box-shadow: 4px 0 15px rgba(30, 60, 114, 0.2);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    width: 280px;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    padding: 20px;
+}
+
+/* Overlay pattern untuk tekstur sidebar */
+.sidebar-government::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M0,0 L100,0 L100,100 L0,100 Z" fill="white" opacity="0.05"/></svg>');
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.sidebar-government .brand-section {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: left;
+}
+
+.sidebar-government .brand-title {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.sidebar-government .brand-subtitle {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+.sidebar-government .brand-text {
+    color: white;
+    margin-left: 0px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Logo */
+.logo-wrapper {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.sidebar-government .nav-link {
+    color: rgba(255, 255, 255, 0.9) !important;
+    padding: 12px 16px;
+    margin-bottom: 8px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+}
+
+/* Efek kilau saat hover */
+.sidebar-government .nav-link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: left 0.5s ease;
+}
+
+.sidebar-government .nav-link:hover::before {
+    left: 100%;
+}
+
+.sidebar-government .nav-link:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: white !important;
+    transform: translateX(8px);
+    border-color: rgba(255, 215, 0, 0.5);
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.2);
+}
+
+.sidebar-government .nav-link.active {
+    background: linear-gradient(
+        135deg,
+        var(--government-accent) 0%,
+        #ffed4e 100%
+    );
+    color: var(--government-primary) !important;
+    font-weight: 600;
+    border-color: var(--government-accent);
+    box-shadow: 0 4px 20px rgba(255, 215, 0, 0.3);
+}
+
+.sidebar-government .nav-link.active i {
+    color: var(--government-primary) !important;
+}
+
+.sidebar-government .nav-link i {
+    width: 20px;
+    margin-right: 12px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.sidebar-government hr {
+    border-color: rgba(255, 255, 255, 0.3);
+    margin: 20px 0;
+}
+
+.btn-government-logout {
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(220, 53, 69, 0.3);
+    cursor: pointer;
+}
+
+.btn-government-logout:hover {
+    background: linear-gradient(135deg, #c82333 0%, #bd2130 100%);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(220, 53, 69, 0.4);
+}
+
+/* Mobile Navbar Styles */
+.mobile-navbar-government {
+    background: linear-gradient(
+        135deg,
+        var(--government-primary) 0%,
+        var(--government-secondary) 100%
+    );
+    color: white;
+    box-shadow: 0 4px 15px rgba(30, 60, 114, 0.3);
+    border-bottom: 3px solid var(--government-accent);
+}
+
+.mobile-navbar-government .navbar-brand {
+    color: white !important;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Nav section headers */
+.nav-section-header {
+    color: var(--government-accent);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 20px 0 10px 0;
+    padding-left: 16px;
+}
+
+/* User info section */
+.user-info {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.user-info .user-name {
+    color: white;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.user-info .user-role {
+    color: var(--government-accent);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive Main Content area adjustment */
+.main-content {
+    transition: margin 0.3s ease;
+    padding: 20px;
+}
+
+@media (min-width: 769px) {
+    .main-content {
+        margin-left: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-collapse {
+        background: linear-gradient(
+            135deg,
+            var(--government-primary) 0%,
+            var(--government-secondary) 100%
+        );
+        margin-top: 10px;
+        border-radius: 15px;
+        padding: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    }
+}
+
+/* SweetAlert Custom Styles */
+.swal-government-popup {
+    border-radius: 15px !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2) !important;
+    padding: 2rem !important;
+}
+.swal-government-title {
+    color: #1e3c72 !important;
+    font-weight: 600 !important;
+}
+.swal-government-confirm {
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 8px !important;
+    padding: 10px 24px !important;
+    margin-left: 10px !important;
+    font-weight: 600 !important;
+}
+.swal-government-cancel {
+    background: #6c757d !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 8px !important;
+    padding: 10px 24px !important;
+    font-weight: 600 !important;
+}
+
+/* ============================= */
+/* MOBILE NAVBAR GOVERNMENT FIX */
+/* ============================= */
+
+.mobile-navbar-government {
+    background: linear-gradient(
+        135deg,
+        var(--government-primary) 0%,
+        var(--government-secondary) 100%
+    );
+    color: white;
+    border-bottom: 3px solid var(--government-accent);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* Brand */
+.mobile-navbar-government .navbar-brand {
+    color: white !important;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.mobile-navbar-government .navbar-brand i {
+    color: white !important;
+    font-size: 1.4rem;
+}
+
+/* Hamburger button */
+.mobile-navbar-government .navbar-toggler {
+    border: none;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 6px 10px;
+    border-radius: 8px;
+}
+
+.mobile-navbar-government .navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.mobile-navbar-government .navbar-toggler-icon {
+    filter: brightness(0) invert(1); /* bikin icon putih */
+}
+
+/* Collapse area */
+@media (max-width: 768px) {
+    .mobile-navbar-government .navbar-collapse {
+        background: linear-gradient(
+            180deg,
+            var(--government-primary) 0%,
+            var(--government-secondary) 100%
+        );
+        margin-top: 15px;
+        border-radius: 15px;
+        padding: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+    }
+
+    .mobile-navbar-government .nav-link {
+        color: white !important;
+        font-weight: 500;
+        padding: 12px 14px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .mobile-navbar-government .nav-link i {
+        color: white !important;
+        font-size: 1.1rem;
+    }
+
+    .mobile-navbar-government .nav-link:hover {
+        background: rgba(255, 255, 255, 0.15);
+    }
+
+    .mobile-navbar-government .nav-link.active {
+        background: linear-gradient(
+            135deg,
+            var(--government-accent) 0%,
+            #ffed4e 100%
+        );
+        color: var(--government-primary) !important;
+        font-weight: 600;
+    }
+
+    .mobile-navbar-government .nav-link.active i {
+        color: var(--government-primary) !important;
+    }
+}
+
+/* User Info */
+.mobile-user-info {
+    text-align: center;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.mobile-user-info .user-name {
+    color: var(--government-accent);
+    font-weight: 600;
+}
+
+.mobile-user-info .user-role {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.8rem;
+}
+
+/* Logout button mobile */
+.mobile-navbar-government .btn-government-logout {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* =========================
+   TEMPLATE SURAT
+========================= */
+body {
+    background-color: #f8f9fc;
+}
+
+.card-government {
+    background: linear-gradient(90deg, #1e3a8a 0%, #3b5998 100%);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(30, 60, 114, 0.2);
+}
+
+.card-government h1 {
+    color: white !important;
+    font-weight: 600;
+}
+
+.card-government p {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.bg-gradient-primary {
+    background: linear-gradient(90deg, #1e3a8a 0%, #3b5998 100%);
+}
+
+.card {
+    border: none;
+    border-radius: 4px;
+}
+
+.card-header {
+    border-top-left-radius: 4px !important;
+    border-top-right-radius: 4px !important;
+    padding: 1rem 1.25rem;
+}
+
+.card.shadow {
+    border: none;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1) !important;
+}
+
+.card-header.bg-gradient-primary {
+    background: linear-gradient(90deg, #1e3a8a 0%, #3b5998 100%) !important;
+    padding: 15px 20px;
+    border-bottom: none;
+}
+
+/* Styling Judul di dalam Header */
+.card-header h5 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+}
+
+/* Styling Ikon (Bootstrap Icons) */
+.card-header h5 i {
+    font-size: 1.3rem;
+    opacity: 0.9;
+}
+
+/* Penyesuaian Body Card */
+.card-body {
+    padding: 1.5rem;
+    background-color: #ffffff;
+}
+
+/* Efek Hover untuk baris tabel di dalam card agar lebih interaktif */
+.table-hover tbody tr:hover {
+    background-color: #f8faff;
+    transition: background-color 0.2s ease;
+}
+
+/* Table Styling */
+.table-government thead th {
+    background-color: #f8f9fc;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    color: #071e69;
+    border-bottom: 2px solid #e3e6f0;
+}
+
+.table-government tbody tr {
+    transition: all 0.2s;
+}
+
+.table-government tbody tr:hover {
+    background-color: rgba(78, 115, 223, 0.05);
+}
+
+.badge {
+    font-weight: 600;
+    padding: 0.5em 0.8em;
+}
+
+code {
+    color: #e83e8c;
+    word-wrap: break-word;
+}
+
+/* Button Styling */
+.btn-icon-split {
+    padding: 0;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.btn-icon-split .icon {
+    background: rgba(0, 0, 0, 0.15);
+    padding: 0.375rem 0.75rem;
+}
+
+.btn-icon-split .text {
+    padding: 0.375rem 0.75rem;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+    background: #4e73df !important;
+    color: white !important;
+    border: 1px solid #4e73df !important;
+}
+
+.dataTables_wrapper .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dataTables_length {
+    margin-bottom: 0;
+}
+
+.dataTables_filter {
+    text-align: right;
+}
+
+.dataTables_filter label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.dataTables_length label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.dataTables_length select,
+.dataTables_filter input {
+    display: inline-block;
+    width: auto;
+    margin: 0;
+}
+
+/* =========================
+  TAMBAH TEMPLATE SURAT
+========================= */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.header-title-box {
+    background: linear-gradient(90deg, #1e3a8a 0%, #3b5998 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.1);
+    margin-bottom: 20px;
+}
+
+.card-header {
+    background-color: #f8f9fc;
+    border-bottom: 1px solid #e3e6f0;
+    font-weight: bold;
+    color: linear-gradient(90deg, #1e3a8a 0%, #3b5998 100%);
+}
+
+.form-label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #3a3b45;
+}
+
+/* Fokus input & textarea */
+.form-control:focus {
+    border-color: #1e3c72 !important; /* biru tua */
+    box-shadow: 0 0 0 0.1rem rgba(30, 60, 114, 0.2) !important; /* tipis */
+    outline: none;
+}
+
+/* Input group juga ikut rapi */
+.input-group:focus-within {
+    border-radius: 6px;
+    box-shadow: 0 0 0 0.1rem rgba(30, 60, 114, 0.2);
+}
+
+/* Biar border tidak dobel */
+.input-group .form-control {
+    border-left: none;
+}
+
+/* Optional: hilangkan shadow terlalu tebal */
+.input-group.shadow-sm {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05) !important;
+}
+
+.input-group-text {
+    background-color: #f8f9fc;
+}
+
+/* --- BUILDER AREA --- */
+.builder-container {
+    border: 2px dashed #d1d3e2;
+    border-radius: 4px;
+    background: #fbfcfe;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #858796;
+}
+
+.btn-group-tools .btn {
+    font-size: 0.85rem;
+    padding: 8px 15px;
+}
+
+.placeholder-box {
+    background-color: #e3f2fd;
+    border: 1px solid #bbdefb;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+code {
+    color: #e83e8c;
+    background: #f8f9fc;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+.btn-light.text-white {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    color: #ffffff;
+}
+
+.btn-light.text-white:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+}
+
+/* =========================
+  ELEMEN TAMBAH TEMPLATE SURAT
+========================= */
+body {
+    background-color: #f8f9fc;
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.bg-gradient-primary {
+    background: linear-gradient(135deg, #4e73df 0%, #224abe 100%);
+}
+
+.card {
+    border: none;
+    border-radius: 5px;
+}
+
+.template-builder .card-header {
+    border-top-left-radius: 5px !important;
+    border-top-right-radius: 5px !important;
+}
+
+/* Template Preview Area */
+.template-preview {
+    border: 2px dashed #e3e6f0;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #fff;
+    min-height: 300px;
+}
+
+.builder-element {
+    position: relative;
+    background: #fff;
+    border: 1px solid #e3e6f0;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    cursor: move;
+    transition: all 0.2s;
+}
+
+.builder-element:hover {
+    border-color: #4e73df;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.builder-element.active {
+    background-color: rgba(78, 115, 223, 0.02);
+}
+
+.element-badge {
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.new-element {
+    animation: fadeIn 0.3s ease-out;
+}
+
+.empty-state {
+    color: #b7b9cc;
+}
