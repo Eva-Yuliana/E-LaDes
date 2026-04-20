@@ -20,8 +20,8 @@ use App\Http\Controllers\ActivityLogsController;
 use Illuminate\Support\Facades\Artisan;
 
 Route::get('/', function () {
-    return view('welcome');
-})->name('welcome');
+    return view('landing.landing');
+})->name('landing');
 
 
 Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
